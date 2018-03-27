@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>奇怪的三角形</title>
+</head>
+<body>
+    <center>
+        <script>
+            var a = prompt("请输入一个整数","");
+            if(a>5){
+                for(var i=a;i>0;i--){
+                    for(var j=0;j<i;j++){
+                        document.write("*&nbsp;&nbsp;");
+                    }
+                    document.write("<br/>");
+                }
+
+            }
+            else{
+                for(var z=a;z>0;z--){
+                    for(var x=0;x<z;x++){
+                        document.write("*&nbsp;&nbsp;");
+                    }
+                    document.write("<br/>")
+                }
+                for(var n=1;n<=a;n++){
+                    for(var m=0;m<n;m++){
+                        document.write("*&nbsp;&nbsp;");
+                    }
+                    document.write("<br/>");
+                }
+            }
+        </script>
+    </center>
+</body>
+</html>

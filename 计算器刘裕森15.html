@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算器</title>
+</head>
+<style>
+    #a1,#a2{
+        margin-bottom: 5px;
+    }
+    #jia,#jian,#cheng,#chu{
+        width: 3.73%;
+        height: 30px;
+        margin-bottom: 5px;
+    }
+</style>
+<body>
+    <center>
+        <table>
+            <tr>
+                <td><img src="xxx.jpg"></td>
+                <td><h1>简易计算器</h1></td>
+            </tr>
+        </table>
+        <form name="t">
+            <tr>
+                <td>第一个数</td>
+                <td colspan="3"><input name="a" type="text" id="a1" size="20"><br/></td>
+            </tr>
+            <tr>    
+                <td>第二个数</td>
+                <td colspan="3"><input name="a" type="text" id="a2" size="20"><br/></td>
+                
+            </tr>
+            
+            <tr>
+                <td><input type="button" id="jia" value="+" onclick="compute('+')"/></td>
+                <td><input type="button" id="jian" value="-" onclick="compute('-')"/></td>
+                <td><input type="button" id="cheng" value="*" onclick="compute('*')"/></td>
+                <td><input type="button" id="chu" value="÷" onclick="compute('/')"/><br/></td>
+            </tr>
+
+            <tr>
+                <td>计算结果</td>
+                <td colspan="3"><input name="txtresult" type="text" id="txtresult" size="20"/></td>
+            </tr>
+        </form>
+    </center>
+
+    <script>
+        function compute(obj){
+            var num1,num2,result;
+            num1 = parseFloat(document.t.a1.value);
+            num2 = parseFloat(document.t.a2.value);
+            switch(obj){
+                case "+":
+                result=num1+num2;
+                break;
+                case "-":
+                result=num1-num2;
+                break;
+                case "*":
+                result=num1*num2;
+                break;
+                case "/":
+                if(num2!=0)
+                result=num1/num2;
+                else
+                result="除数不能为0，请重新输入!";
+                break;
+            }
+            document.t.txtresult.value=result;
+        }
+    </script>
+</body>
+</html>
